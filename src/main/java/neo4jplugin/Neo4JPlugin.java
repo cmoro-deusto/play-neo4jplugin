@@ -10,6 +10,7 @@ import play.Plugin;
 import play.api.Play;
 
 import java.lang.annotation.Annotation;
+import javax.inject.Inject;
 
 /**
  * @author tuxburner
@@ -29,6 +30,7 @@ public class Neo4JPlugin extends Plugin {
 
     private static Class<?> serviceProviderClass = null;
 
+    @Inject
     public Neo4JPlugin(Application application) {
         this.application = application;
     }
